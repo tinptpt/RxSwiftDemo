@@ -10,11 +10,6 @@ import Foundation
 import RxSwift
 import Alamofire
 
-struct Constants {
-    static let baseUrl = "https://www.googleapis.com/youtube/"
-    static let apiVersion = "v3/"
-    static let apiKey = "AIzaSyB6IhHqdWbDc1oBcwsxTOvZqRk4Pvyo5hs"
-}
 
 enum ApiPath: String {
     case search = "search"
@@ -30,6 +25,13 @@ enum SearchType: String {
 class APIManager {
     
     static let shared = APIManager()
+
+
+    private struct Constants {
+        static let baseUrl = "https://www.googleapis.com/youtube/"
+        static let apiVersion = "v3/"
+        static let apiKey = "AIzaSyB6IhHqdWbDc1oBcwsxTOvZqRk4Pvyo5hs"
+    }
     
     // MARK: Search video return list of 50 items
     func searchVideo(byKeyword keyword: String) -> Observable<[Video]> {
