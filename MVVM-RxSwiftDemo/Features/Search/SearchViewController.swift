@@ -46,10 +46,17 @@ class SearchViewController: UIViewController, LoadingAble {
         tableView.register(VideoTableViewCell.nib, forCellReuseIdentifier: VideoTableViewCell.identifer)
         
         viewModel.videos
+            .do(onError: { error in
+                print(error.localizedDescription)
+            })
+            .catchErrorJustReturn([])
             .observeOn(MainScheduler.instance)
-            .bind(to: tableView.rx.items(cellIdentifier: VideoTableViewCell.identifer, cellType: VideoTableViewCell.self)) {
+            .bind(to: self.tableView.rx.items(cellIdentifier: VideoTableViewCell.identifer, cellType: VideoTableViewCell.self)) {
                 // Shortten the code, there is 3 arguments in the closure (index, video, cell) stands for ($0, $1, $2)
                 $2.config($1)
-            }.disposed(by: disposeBag)
+            }
+            .disposed(by: disposeBag)
+
+
     }
 }

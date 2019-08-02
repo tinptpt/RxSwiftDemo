@@ -17,15 +17,14 @@ class SearchVideoViewModel {
     var videos: Observable<[Video]> = .empty()
     
     init() {
-        videos = keyword.asObservable()
-                        .debounce(.milliseconds(300), scheduler: ConcurrentDispatchQueueScheduler(qos: .background))
+        videos = keyword.debounce(.milliseconds(300), scheduler: ConcurrentDispatchQueueScheduler(qos: .background))
                         .distinctUntilChanged()
                         .flatMapLatest({ text -> Observable<[Video]> in
                             if text.isEmpty {
                                 return .just([])
                             }
                             return APIManager.shared.searchVideo(byKeyword: text)
-                        }).share(replay: 1, scope: .whileConnected)
+                        })
     }
     
 }

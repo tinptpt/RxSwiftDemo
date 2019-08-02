@@ -60,7 +60,14 @@ class APIManager {
                         }
                         
                         if let itemResponse = Videos(JSON: jsonDictionary), let items = itemResponse.videos {
-                            observable.onNext(items)
+                            if items.count == 0 {
+                                let userInfo: [String : Any] =
+                                    [NSLocalizedDescriptionKey : "Empty Data"]
+                                let error = NSError(domain:"", code:0, userInfo:userInfo)
+                                observable.onError(error)
+                            } else {
+                                observable.onNext(items)
+                            }
                         }
                     case .failure(let error): observable.onError(error)
                     }
