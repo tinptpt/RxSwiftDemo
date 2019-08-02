@@ -11,7 +11,9 @@ import RxSwift
 
 class SearchVideoViewModel {
     //MARK: Observables
-    var keyword: BehaviorSubject<String> = BehaviorSubject<String>(value: "")
+
+//    let loading: PublishSubject<Bool> = PublishSubject()
+    let keyword: BehaviorSubject<String> = BehaviorSubject<String>(value: "")
     var videos: Observable<[Video]> = .empty()
     
     init() {

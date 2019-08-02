@@ -17,6 +17,10 @@
 		3F535B9D22F048AA00F06EE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F535B9B22F048AA00F06EE9 /* LaunchScreen.storyboard */; };
 		3F535BA822F048AA00F06EE9 /* MVVM_RxSwiftDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F535BA722F048AA00F06EE9 /* MVVM_RxSwiftDemoTests.swift */; };
 		3F535BB322F048AB00F06EE9 /* MVVM_RxSwiftDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F535BB222F048AB00F06EE9 /* MVVM_RxSwiftDemoUITests.swift */; };
+		3FA4EF6F22F424590033A0E6 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA4EF6D22F424590033A0E6 /* VideoTableViewCell.swift */; };
+		3FA4EF7022F424590033A0E6 /* VideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FA4EF6E22F424590033A0E6 /* VideoTableViewCell.xib */; };
+		3FA4EF7622F427060033A0E6 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA4EF7522F427060033A0E6 /* UITableViewCell+Extension.swift */; };
+		3FA4EF7822F427FE0033A0E6 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA4EF7722F427FE0033A0E6 /* UIViewController+Extension.swift */; };
 		59866E1A908262B5AE8BE4C6 /* Pods_MVVM_RxSwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D18634DDCCDA4F5FBB1D29E /* Pods_MVVM_RxSwiftDemo.framework */; };
 		8B07D29828E1727EB3CEF9A4 /* Pods_MVVM_RxSwiftDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1871593D81FAD307AD72BCD7 /* Pods_MVVM_RxSwiftDemoUITests.framework */; };
 		A04CC1519632B74C03E52FE3 /* Pods_MVVM_RxSwiftDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2525469B3B1238E01B6A261 /* Pods_MVVM_RxSwiftDemoTests.framework */; };
@@ -58,6 +62,10 @@
 		3F535BAE22F048AB00F06EE9 /* MVVM-RxSwiftDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MVVM-RxSwiftDemoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F535BB222F048AB00F06EE9 /* MVVM_RxSwiftDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_RxSwiftDemoUITests.swift; sourceTree = "<group>"; };
 		3F535BB422F048AB00F06EE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FA4EF6D22F424590033A0E6 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
+		3FA4EF6E22F424590033A0E6 /* VideoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoTableViewCell.xib; sourceTree = "<group>"; };
+		3FA4EF7522F427060033A0E6 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		3FA4EF7722F427FE0033A0E6 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		492FEFC63E83C4F5F20EF8DB /* Pods-MVVM-RxSwiftDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM-RxSwiftDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-MVVM-RxSwiftDemoTests/Pods-MVVM-RxSwiftDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		70EF29725305D4CB35F2D1F4 /* Pods-MVVM-RxSwiftDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM-RxSwiftDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-MVVM-RxSwiftDemoUITests/Pods-MVVM-RxSwiftDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A6B533045975199739E53799 /* Pods-MVVM-RxSwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM-RxSwiftDemo.release.xcconfig"; path = "Target Support Files/Pods-MVVM-RxSwiftDemo/Pods-MVVM-RxSwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -106,6 +114,7 @@
 		3F4D5E8622F1705F00BD4E1F /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				3FA4EF7122F4245F0033A0E6 /* Cell */,
 				3F4D5E8C22F17FB900BD4E1F /* SearchViewController.swift */,
 				3F4D5E9622F2BB4200BD4E1F /* SearchVideoViewModel.swift */,
 			);
@@ -153,6 +162,7 @@
 		3F535B9122F048A900F06EE9 /* MVVM-RxSwiftDemo */ = {
 			isa = PBXGroup;
 			children = (
+				3FA4EF7222F426970033A0E6 /* Extensions */,
 				3F4D5E8422F1704F00BD4E1F /* Features */,
 				3F4D5E8E22F17FBE00BD4E1F /* Helper */,
 				3F4D5E8F22F17FFD00BD4E1F /* Model */,
@@ -181,6 +191,24 @@
 				3F535BB422F048AB00F06EE9 /* Info.plist */,
 			);
 			path = "MVVM-RxSwiftDemoUITests";
+			sourceTree = "<group>";
+		};
+		3FA4EF7122F4245F0033A0E6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3FA4EF6D22F424590033A0E6 /* VideoTableViewCell.swift */,
+				3FA4EF6E22F424590033A0E6 /* VideoTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		3FA4EF7222F426970033A0E6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3FA4EF7522F427060033A0E6 /* UITableViewCell+Extension.swift */,
+				3FA4EF7722F427FE0033A0E6 /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		A5775DA0A01D4BF75E6EDE10 /* Pods */ = {
@@ -315,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F535B9D22F048AA00F06EE9 /* LaunchScreen.storyboard in Resources */,
+				3FA4EF7022F424590033A0E6 /* VideoTableViewCell.xib in Resources */,
 				3F535B9A22F048AA00F06EE9 /* Assets.xcassets in Resources */,
 				3F535B9822F048A900F06EE9 /* Main.storyboard in Resources */,
 			);
@@ -427,11 +456,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FA4EF7822F427FE0033A0E6 /* UIViewController+Extension.swift in Sources */,
 				3F4D5E8D22F17FB900BD4E1F /* SearchViewController.swift in Sources */,
 				3F4D5E9122F181E900BD4E1F /* Video.swift in Sources */,
 				3F535B9322F048A900F06EE9 /* AppDelegate.swift in Sources */,
+				3FA4EF7622F427060033A0E6 /* UITableViewCell+Extension.swift in Sources */,
 				3F4D5E9322F1882600BD4E1F /* YoutubeAPIManager.swift in Sources */,
 				3F4D5E9722F2BB4200BD4E1F /* SearchVideoViewModel.swift in Sources */,
+				3FA4EF6F22F424590033A0E6 /* VideoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

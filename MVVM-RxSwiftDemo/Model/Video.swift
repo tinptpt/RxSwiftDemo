@@ -17,7 +17,8 @@ class Video: Mappable {
     required init?(map: Map) {
         videoId = try? map.value("snippet.id.videoId")
         videoTitle = try? map.value("snippet.title")
-        videoThumbnailUrl = (try? map.value("snippet.thumbnails.high", using: URLTransform())) ?? (try?  map.value("snippet.thumbnails.medium", using: URLTransform()))
+        videoThumbnailUrl = (try? map.value("snippet.thumbnails.high.url", using: URLTransform())) ?? (try?  map.value("snippet.thumbnails.medium.url", using: URLTransform()))
+        videoChannelTitle = try? map.value("snippet.channelTitle")
     }
     
     func mapping(map: Map) {}
